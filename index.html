@@ -1,72 +1,390 @@
 <html>
  <head>
   <title>
-   Campus Conect
+   Web Page
   </title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
- 
   <style>
    body {
-            background-color: #FF8C00;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
         }
-        .container {
+        .header {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .header .info {
+            margin-left: 10px;
+        }
+        .header .info h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .header .info p {
+            margin: 0;
+            font-size: 14px;
+            color: gray;
+        }
+        .header .search {
+            margin-left: auto;
+            display: flex;
             align-items: center;
         }
-        .logo {
+        .header .search input {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .header .search i {
+            margin-left: -25px;
+            cursor: pointer;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .main-content .highlight {
+            border: 2px solid orange;
+            padding: 10px;
+            position: relative;
             margin-bottom: 20px;
         }
-        .logo img {
-            width: 100px;
-        }
-        h1 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-        p {
+        .main-content .highlight .title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: orange;
+            color: white;
+            padding: 5px;
             font-size: 14px;
-            margin: 20px 0;
         }
-        .button {
-            background-color: white;
-            color: #FF8C00;
+        .main-content .highlight .view-all {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: black;
+        }
+        .main-content .highlight img {
+            width: 50%;
+            height: auto;
+        }
+        .main-content .highlight .register {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: orange;
+            color: white;
+            padding: 5px 20px;
             border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px 0;
             cursor: pointer;
-            width: 150px;
-            text-decoration: none;
-            display: inline-block;
+        }
+        .main-content .organization-list {
+            margin-top: 20px;
+        }
+        .main-content .organization-list h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .main-content .organization-list .organization {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .main-content .organization-list .organization .org-item {
+            border: 2px solid orange;
+            width: 30%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .main-content .organization-list .organization .org-item .title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: orange;
+            color: white;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .main-content .organization-list .organization .org-item img {
+            width: 100%;
+            height: auto;
+        }
+        .main-content .organization-list .organization .org-item .register {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: orange;
+            color: white;
+            padding: 5px 0px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    .main-content .organization-list .organization .org-item .title {
+        position: relative; /* Ubah dari absolute menjadi relative */
+        top: 3; /* Posisi tetap di atas */
+        left: 0; /* Sesuaikan dengan padding jika diperlukan */
+        text-align: center; /* Agar teks berada di tengah */
+        margin-bottom: 10px; /* Jarak dengan gambar */
+    }
+
+    .main-content .organization-list .organization .org-item .register {
+        position: relative; /* Ubah dari absolute menjadi relative */
+        bottom: 0; /* Posisi tetap di bawah */
+        left: 0; /* Sesuaikan dengan padding jika diperlukan */
+        width: 50%;
+         left: 65;
+        text-align: center; /* Teks tombol berada di tengah */
+        display: block; /* Agar tombol berada di bawah elemen lainnya */
+        margin-bottom: 10px;
+        left: 2;
+    }
+
+    .main-content .organization-list .organization .org-item img {
+        margin-bottom: 10px; /* Jarak antara gambar dan tombol */
+    }
+
+</style>
+
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Profile Image" height="50" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="50"/>
+   <div class="info">
+    <h1>
+     halo.....
+    </h1>
+    <p>
+     mulai mendaftar
+    </p>
+   </div>
+   <div class="search">
+    <input placeholder="Search" type="text"/>
+    <i class="fas fa-search">
+    </i>
+   </div>
+  </div>
+  <div class="main-content">
+   <div class="highlight">
+    <div class="title">
+     EMPTY NAME UKM
+    </div>
+    <div class="view-all">
+     LIHAT SEMUA
+    </div>
+    <img alt="Highlight Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="600"/>
+    <button class="register">
+     DFTAR SEKARANG
+    </button>
+   </div>
+   <div class="organization-list">
+    <h2>
+     Daftar Organisasi
+    </h2>
+    <h4>// aplikasi ini masi dalam tahap percobaan//</h4>
+    <div class="organization">
+     <div class="org-item">
+      <div class="title">
+        EMPTY UKM
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+     <div class="org-item">
+      <div class="title">
+       EMPTY UKM
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+     <div class="org-item">
+      <div class="title">
+       EMPTY UKM
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+     <div class="org-item">
+      <div class="title">
+       EMPTY UKM
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+     <div class="org-item">
+      <div class="title">
+       EMPTY UKM 
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+     <div class="org-item">
+      <div class="title">
+       EMPTY UKM 
+      </div>
+      <img alt="Organization Image" height="300" src="https://static.vecteezy.com/system/resources/previews/022/014/063/original/missing-picture-page-for-website-design-or-mobile-app-design-no-image-available-icon-vector.jpg" width="200"/>
+      <button class="register">
+       DAFTAR
+      </button>
+     </div>
+    </div class="HAKCIPTA">
+    <P></P>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<html>
+ <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #000;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header img {
+            height: 50px;
+        }
+        .header .title {
+            display: flex;
+            align-items: center;
+        }
+        .header .title img {
+            margin-right: 10px;
+        }
+        .header .title h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header .title h2 {
+            font-size: 18px;
+            margin: 0;
+            font-weight: normal;
+        }
+        .footer {
+            background-color: #000000;
+            padding: 20px;
+            border-top: 1px solid #ffffff;
             text-align: center;
+        }
+        .footer .links {
+            margin-bottom: 10px;
+        }
+        .footer .links a {
+            margin: 0 10px;
+            color: #f6f6f6;
+            text-decoration: none;
+            font-size: 14px;
+            
+        }
+        .footer .social-icons {
+            margin-bottom: 10px;
+        }
+        .footer .social-icons a {
+            margin: 0 10px;
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .footer .copyright {
+            font-size: 14px;
+            color: #ffffff;
         }
   </style>
  </head>
  <body>
-  <div class="container">
-   <div class="logo">
-    <img alt="Campus Conect logo" height="100" src="https://storage.googleapis.com/a1aa/image/YBLohgQpajJeLyXVfjoSYO0cOjYrpSLac7WeXiHhhmpArBjnA.jpg" width="100"/>
+  <div class="header">
+   <div class="title">
+    <img alt="Harvard Medical School logo" height="50" src="https://tse1.mm.bing.net/th?id=OIP.33vymHZze-zqgJChCGDgAQHaHc&pid=Api&P=0&h=220" width="50"/>
+    <div>
+     <h1>
+     CAMPUS CONECT
+     </h1>
+     <h2>
+    unika santo thomas medan
+     </h2>
+    </div>
    </div>
-   <h1>
-    SELAMAT DATANG DI CAMPUS CONECT
-   </h1>
-   <p>
-    masuk sebagai
-   </p>
-   <a href="https://pixelartt.github.io/dasbor-admin/" class="button">admin</a>
-   <a href="https://pixelartt.github.io/login-page-mahasiswa/" class="button">mahasiswa</a>
+  </div>
+  <div class="footer">
+   <div class="links">
+    <a href="#">
+     Contact us to more info
+    </a>
+    <a href="#">
+     
+    </a>
+    <a href="#">
+    
+    </a>
+    <a href="#">
+     
+    </a>
+    <a href="#">
+    </a>
+   </div>
+   <div class="links">
+    <a href="#">
+    </a>
+    <a href="#">
+    </a>
+   </div>
+   <hr style="width: 50px; margin: 20px auto;"/>
+   <div class="social-icons">
+    <a href="#">
+     <i class="fab fa-facebook-square">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+   </div>
+   <div class="copyright">
+    © 2024 The Development of campus conect
+   </div>
   </div>
  </body>
 </html>
