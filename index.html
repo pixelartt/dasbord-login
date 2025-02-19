@@ -1,80 +1,102 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Conect</title>
-    <style>
+    <title>Loading Animation</title>
+    <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #FF8C00;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-        }
-        .container {
-            display: flex;
+            background-color: #f4f4f4;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
         }
-        .logo {
-            margin-bottom: 20px;
+
+        @keyframes square-animation {
+            0%, 10.5% { left: 0; top: 0; }
+            12.5%, 23% { left: 32px; top: 0; }
+            25%, 35.5% { left: 64px; top: 0; }
+            37.5%, 48% { left: 64px; top: 32px; }
+            50%, 60.5% { left: 32px; top: 32px; }
+            62.5%, 73% { left: 32px; top: 64px; }
+            75%, 85.5% { left: 0; top: 64px; }
+            87.5%, 98% { left: 0; top: 32px; }
+            100% { left: 0; top: 0; }
         }
-        .logo img {
-            width: 100px;
-            height: auto;
+
+        .loader {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            transform: rotate(45deg);
+            display: none;
         }
-        h1 {
-            font-size: 24px;
-            margin: 10px 0;
+
+        .loader-square {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 28px;
+            height: 28px;
+            margin: 2px;
+            background: red;
+            animation: square-animation 10s ease-in-out infinite both;
         }
-        p {
-            font-size: 14px;
-            margin: 20px 0;
+
+        .loader-square:nth-child(1) { animation-delay: 0s; }
+        .loader-square:nth-child(2) { animation-delay: -1.428s; }
+        .loader-square:nth-child(3) { animation-delay: -2.857s; }
+        .loader-square:nth-child(4) { animation-delay: -4.285s; }
+        .loader-square:nth-child(5) { animation-delay: -5.714s; }
+        .loader-square:nth-child(6) { animation-delay: -7.142s; }
+        .loader-square:nth-child(7) { animation-delay: -8.571s; }
+
+        @keyframes text-blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
-        .button {
-            background-color: white;
-            color: #FF8C00;
-            border: none;
-            border-radius: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px 0;
-            cursor: pointer;
-            width: 150px;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .button:hover {
-            background-color: #FF6700;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 20px;
-            }
-            .button {
-                width: 100%;
-            }
+
+        .loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: none;
+            animation: text-blink 1s infinite;
         }
     </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.loader').style.display = 'block';
+                document.querySelector('.loading-text').style.display = 'block';
+            }, 500);
+
+            setTimeout(function() {
+                window.location.href = 'https://pixelartt.github.io/porojec-training-RPL/';
+            }, 7000); 
+        };
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
-            <img src="https://storage.googleapis.com/a1aa/image/YBLohgQpajJeLyXVfjoSYO0cOjYrpSLac7WeXiHhhmpArBjnA.jpg" alt="Campus Conect logo">
-        </div>
-        <h1>SELAMAT DATANG DI CAMPUS CONECT</h1>
-        <p>masuk sebagai</p>
-        <a href="https://pixelartt.github.io/dasbor-admin/" class="button">admin</a>
-        <a href="https://pixelartt.github.io/login-page-mahasiswa/" class="button">mahasiswa</a>
+    <div class="loader">
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
     </div>
+    <div class="loading-text">Loading...</div>
 </body>
 </html>
